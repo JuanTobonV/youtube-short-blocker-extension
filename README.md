@@ -10,9 +10,3 @@ Esta extensión de navegador está diseñada para bloquear los videos de YouTube
 
 ## Instalación
 
-### 1. Descargar o Clonar el Repositorio
-
-Si aún no tienes los archivos de la extensión, puedes clonarlos o descargarlos desde el repositorio:
-
-```bash
-git clone https://github.com/tu-usuario/block-youtube-shorts.git
