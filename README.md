@@ -1,52 +1,50 @@
-# Block YouTube Shorts (Extensión para Chrome)
+## Description
 
-## Descripción
+This Google Chrome extension is designed to help you stay focused by eliminating distractions from YouTube Shorts. It hides Shorts-related elements in the YouTube interface and redirects you to the main page if you try to access a Short directly.
 
-Esta extensión para Google Chrome está diseñada para ayudarte a mantener la concentración eliminando las distracciones de los YouTube Shorts. Oculta los elementos relacionados con los Shorts en la interfaz de YouTube y te redirige a la página principal si intentas acceder directamente a un Short.
+It includes an easy-to-use toggle in the popup window to enable or disable blocking based on your needs.
 
-Incluye un interruptor fácil de usar en la ventana emergente (popup) para activar o desactivar el bloqueo según tus necesidades.
+## Features
 
-## Características
+* **Visual Stripping:** Hides Shorts videos, Shorts shelves, and Shorts links in the YouTube interface.
+* **Automatic Redirect:** If you navigate to a YouTube Shorts URL (`/shorts/`), you will be automatically redirected to the YouTube main page (`https://www.youtube.com`).
+* **Toggle Control:** Allows you to easily enable and disable the blocking functionality via a button in the extension's popup window.
+* **State Persistence:** Saves your preference (on/off) so that it persists between browsing sessions.
 
-* **Eliminación Visual:** Oculta los videos Shorts, estanterías de Shorts y enlaces a Shorts en la interfaz de YouTube.
-* **Redirección Automática:** Si navegas a una URL de YouTube Shorts (`/shorts/`), te redirige automáticamente a la página principal de YouTube (`https://www.youtube.com`).
-* **Control de Activación:** Permite activar y desactivar fácilmente la funcionalidad de bloqueo a través de un botón en la ventana emergente de la extensión.
-* **Persistencia del Estado:** Guarda tu preferencia (activado/desactivado) para que se mantenga entre sesiones de navegación.
+## Installation
 
-## Instalación
+### Option 1: From the Chrome Web Store (Coming Soon)
 
-### Opción 1: Desde la Chrome Web Store (Próximamente)
+Once the extension is published, you can install it directly from the Chrome Web Store. (You can add the link here when available.)
 
-Una vez que la extensión sea publicada, podrás instalarla directamente desde la Chrome Web Store. (Puedes añadir el enlace aquí cuando esté disponible).
+### Option 2: Manual Installation (Development)
 
-### Opción 2: Instalación Manual (Desarrollo)
+1. Download or clone this repository to your local machine.
+2. Open Google Chrome.
+3. Go to chrome://extensions.
+4. Make sure "Developer Mode" is enabled (switch in the top right corner).
+5. Click the "Upload Unzipped" button.
+6. Navigate to the folder where you downloaded/cloned the project and select it.
+7. The extension should now appear in your extensions list and be active!
 
-1.  Descarga o clona este repositorio en tu máquina local.
-2.  Abre Google Chrome.
-3.  Ve a `chrome://extensions`.
-4.  Asegúrate de que el "Modo de desarrollador" esté activado (interruptor en la esquina superior derecha).
-5.  Haz clic en el botón "Cargar descomprimida".
-6.  Navega hasta la carpeta donde descargaste/clonaste el proyecto y selecciónala.
-7.  ¡La extensión debería aparecer ahora en tu lista de extensiones y estar activa!
+## Usage
 
-## Uso
+1. Once installed, the extension will automatically start working on YouTube.
+2. To enable or disable blocking:
+* Click the extension icon (the icon you defined in `img/icon.png`) in the Chrome toolbar.
+* A small pop-up window will appear.
+* Click the "Disable Blocking" or "Enable Blocking" button depending on the current state. The state will be saved, and the YouTube page will reload if you are on it.
 
-1.  Una vez instalada, la extensión comenzará a funcionar automáticamente en YouTube.
-2.  Para activar o desactivar el bloqueo:
-    * Haz clic en el icono de la extensión (el icono que definiste en `img/icon.png`) en la barra de herramientas de Chrome.
-    * Aparecerá una pequeña ventana emergente.
-    * Haz clic en el botón "Desactivar Bloqueo" o "Activar Bloqueo" según el estado actual. El estado se guardará y la página de YouTube se recargará si estás en ella.
+## Project Files
 
-## Archivos del Proyecto
+* `manifest.json`: Extension configuration file.
+* `popup.html`: HTML structure of the pop-up window.
+* `js/popup.js`: Logic for the toggle in the pop-up window.
+* `js/background.js`: Service worker that handles URL redirection.
+* `js/content.js`: Script injected into YouTube to hide Shorts.
+* `styles/popup.css`: CSS file to style the pop-up window.
+* `img/icon.png`: Extension icon.
 
-* `manifest.json`: Archivo de configuración de la extensión.
-* `popup.html`: Estructura HTML de la ventana emergente.
-* `js/popup.js`: Lógica para el interruptor en la ventana emergente.
-* `js/background.js`: Service worker que maneja la redirección de URLs.
-* `js/content.js`: Script que se inyecta en YouTube para ocultar los Shorts.
-* `styles/popup.css`: Archivo CSS para dar estilo a la ventana emergente.
-* `img/icon.png`: Icono de la extensión.
+## Contributions
 
-## Contribuciones
-
-Si deseas contribuir, por favor abre un "issue" o envía un "pull request". (Opcional: puedes añadir más detalles sobre cómo te gustaría que la gente contribuya).
+If you'd like to contribute, please open an issue or submit a pull request. (Optional: You can add more details about how you'd like people to contribute.)
