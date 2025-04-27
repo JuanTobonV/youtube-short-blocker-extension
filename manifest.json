@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Block YouTube Shorts",
+    "version": "1.0",
+    "description": "Elimina todo rastro de Shorts de YouTube para evitar distracciones.",
+    "background": {
+      "service_worker": "./js/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "img/icon.png",
+            "48": "img/icon.png",
+            "128": "img/icon.png"
+        }
+        
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["./js/content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "permissions": [
+      "storage",
+      "webNavigation"
+    ]
+  }
+  
